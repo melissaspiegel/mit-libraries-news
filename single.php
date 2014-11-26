@@ -19,12 +19,32 @@ get_header(); ?>
 				if ( comments_open() || '0' != get_comments_number() ) :
 					comments_template();
 				endif;
-			?>
+		?>
+<pre>	
 
+<?php   //print_r(get_post_custom($post_id)); 
+	
+$custom_fields = get_post_custom($post_id);
+  $my_custom_field = $custom_fields['feature_type'];
+  foreach ( $my_custom_field as $key => $value ) {
+	 echo $key . " => " . $value . "<br />";
+	}
+	
+	if($key == 'true'){
+		//echo 'hello';
+	}
+	
+	
+?> 
+</pre>
 		<?php endwhile; // end of the loop. ?>
 		<?php get_template_part('inc/related'); ?>
 		</main><!-- #main -->
+		
+		
 	</div><!-- #primary -->
+	
+
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

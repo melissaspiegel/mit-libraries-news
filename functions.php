@@ -53,38 +53,140 @@ function mitlibnews_register_news_posts() {
 		'public' => true,
 		'menu_position' => 5,
 		'supports' => $supports_default,
-		'taxonomies' => array('category'),
-		'has_archive' => true
+		'taxonomies' => array('category')
 	);
 	register_post_type('bibliotech', $argsFeatures);
 
-	// Spotlights
+	// Features
 	$labelsFeatures = array(
-		'name' => 'Spotlights',
-		'singular_name' => 'Spotlight',
-		'menu_name' => 'Spotlights',
-		'name_admin_bar' => 'Spotlight',
+		'name' => 'Spotlights - Featured',
+		'singular_name' => 'Spotlight - Featured',
+		'menu_name' => 'Spotlights - Featured',
+		'name_admin_bar' => 'Spotlight - Featured',
 		'add_new' => 'Add New',
-		'add_new_item' => 'Add New Spotlight',
-		'new_item' => 'New Spotlight',
-		'edit_item' => 'Edit Spotlight',
-		'view_item' => 'View Spotlight',
-		'all_items' => 'All Spotlights',
-		'search_items' => 'Search Spotlights',
-		'parent_item_colon' => 'Parent Spotlights:',
-		'not_found' => 'No Spotlights found.',
-		'not_found_in_trash' => 'No Spotlights found in Trash.'
+		'add_new_item' => 'Add New Spotlight - Featured',
+		'new_item' => 'New Spotlight - Featured',
+		'edit_item' => 'Edit Spotlight - Featured',
+		'view_item' => 'View Spotlight - Featured',
+		'all_items' => 'All Spotlights - Featured',
+		'search_items' => 'Search Spotlights - Featured',
+		'parent_item_colon' => 'Parent Spotlights - Featured:',
+		'not_found' => 'No Spotlights - Featured found.',
+		'not_found_in_trash' => 'No Spotlights - Featured found in Trash.'
 	);
 	$argsFeatures = array(
 		'labels'  => $labelsFeatures,
 		'public' => true,
 		'menu_position' => 5,
 		'supports' => $supports_default,
-		'taxonomies' => array('category'),
-		'has_archive' => true
+		'taxonomies' => array('category')
 	);
-	register_post_type('spotlights', $argsFeatures);
-}
+	register_post_type('features', $argsFeatures);
+
+	// Exhibits
+	//$labelsExhibits = array(
+	//	'name' => 'Spotlights - Exhibits',
+	//	'singular_name' => 'Spotlights - Exhibit',
+	//	'menu_name' => 'Spotlights - Exhibits',
+	//	'name_admin_bar' => 'Spotlights - Exhibit',
+	//	'add_new' => 'Add New',
+	//	'add_new_item' => 'Add New Spotlights - Exhibit',
+	//	'new_item' => 'New Spotlights - Exhibit',
+	//	'edit_item' => 'Edit Spotlights - Exhibit',
+	//	'view_item' => 'View Spotlights - Exhibit',
+	//	'all_items' => 'All Spotlights - Exhibits',
+	//	'search_items' => 'Search Spotlights - Exhibits',
+	//	'parent_item_colon' => 'Parent Spotlights - Exhibits:',
+	//	'not_found' => 'No Spotlights - Exhibits found.',
+	//	'not_found_in_trash' => 'No Spotlights - Exhibits found in Trash.'
+	//);
+	//$argsExhibits = array(
+	//	'labels'  => $labelsExhibits,
+	//	'public' => true,
+	//	'menu_position' => 5,
+	//	'supports' => $supports_default,
+	//	'taxonomies' => array('category')
+	//);
+	//register_post_type('exhibits', $argsExhibits);
+
+	//// Tips
+	//$labelsTips = array(
+	//	'name' => 'Spotlights - Tips',
+	//	'singular_name' => 'Spotlights - Tip',
+	//	'menu_name' => 'Spotlights - Tips',
+	//	'name_admin_bar' => 'Spotlights - Tip',
+	//	'add_new' => 'Add New',
+	//	'add_new_item' => 'Add New Spotlights - Tip',
+	//	'new_item' => 'New Spotlights - Tip',
+	//	'edit_item' => 'Edit Spotlights - Tip',
+	//	'view_item' => 'View Spotlights - Tip',
+	//	'all_items' => 'All Spotlights - Tips',
+	//	'search_items' => 'Search Spotlights - Tips',
+	//	'parent_item_colon' => 'Parent Spotlights - Tips:',
+	//	'not_found' => 'No Spotlights - Tips found.',
+	//	'not_found_in_trash' => 'No Spotlights - Tips found in Trash.'
+	//);
+	//$argsTips = array(
+	//	'labels'  => $labelsTips,
+	//	'public' => true,
+	//	'menu_position' => 5,
+	//	'supports' => $supports_default,
+	//	'taxonomies' => array('category')
+	//);
+	//register_post_type('tips', $argsTips);
+
+	// Facts
+	//$labelsFacts = array(
+		//'name' => 'Spotlights - Facts',
+		//'singular_name' => 'Spotlights - Fact',
+		//'menu_name' => 'Spotlights - Facts',
+		//'name_admin_bar' => 'Spotlights - Fact',
+		//'add_new' => 'Add New',
+		//'add_new_item' => 'Add New Spotlights - Fact',
+		//'new_item' => 'New Spotlights - Fact',
+		//'edit_item' => 'Edit Spotlights - Fact',
+		//'view_item' => 'View Spotlights - Fact',
+		//'all_items' => 'All Spotlights - Facts',
+		//'search_items' => 'Search Spotlights - Facts',
+		//'parent_item_colon' => 'Parent Spotlights - Facts:',
+		//'not_found' => 'No Spotlights - Facts found.',
+		//'not_found_in_trash' => 'No Spotlights - Facts found in Trash.'
+//	);
+//	$argsFacts = array(
+		//'labels'  => $labelsFacts,
+		//'public' => true,
+		//'menu_position' => 5,
+		//'supports' => $supports_default,
+		//'taxonomies' => array('category')
+	//);
+	//register_post_type('facts', $argsFacts);
+
+	// Updates
+	//$labelsUpdates = array(
+	//	'name' => 'Spotlights - Updates',
+	//	'singular_name' => 'Spotlights - Update',
+	//	'menu_name' => 'Spotlights - Updates',
+	//	'name_admin_bar' => 'Spotlights - Update',
+	//	'add_new' => 'Add New',
+	//	'add_new_item' => 'Add New Spotlights - Update',
+	//	'new_item' => 'New Spotlights - Update',
+	//	'edit_item' => 'Edit Spotlights - Update',
+	//	'view_item' => 'View Spotlights - Update',
+	//	'all_items' => 'All Spotlights - Updates',
+	//	'search_items' => 'Search Spotlights - Updates',
+	//	'parent_item_colon' => 'Parent Spotlights - Updates:',
+	//	'not_found' => 'No Spotlights - Updates found.',
+	//	'not_found_in_trash' => 'No Spotlights - Updates found in Trash.'
+	//);
+	//$argsUpdates = array(
+	//	'labels'  => $labelsUpdates,
+	//	'public' => true,
+	//	'menu_position' => 5,
+	//	'supports' => $supports_default,
+	//	'taxonomies' => array('category')
+	//);
+	//register_post_type('updates', $argsUpdates);
+}	//
 
 add_action('init', 'mitlibnews_register_news_posts');
 
@@ -105,3 +207,19 @@ remove_action( 'admin_color_scheme_picker', 'admin_color_scheme_picker' );
 // if( function_exists('get_fields') ){
 // 	add_filter('json_prepare_post', 'wp_api_encode_acf', 10, 3);
 // }
+
+
+	
+	
+
+
+
+//custom images for the news
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'news-thumb', 600, 600, true ); // Hard Crop Mode
+add_image_size( 'other-news', 600, 9999 ); // Unlimited Height Mode
+
+
+
+
+
